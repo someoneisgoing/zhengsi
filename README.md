@@ -7,6 +7,4 @@ i am the new
 | ---------: | -------: | -----: |
 |         mc |     wzry |     cj |
 |          x |        x |      x |
-```javacript
-hihihi
-```
+
