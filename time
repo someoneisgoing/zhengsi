@@ -1,0 +1,49 @@
+import turtle as t
+import time
+s = time.strftime("%Y-%m=%d+",time.gmtime())
+print(s)
+
+def blankt():
+    t.penup()
+    t.fd(5)
+    t.pendown()
+def drawline():
+    blankt()
+    t.pencolor("blue")
+    t.fd(50)
+    blankt()
+    t.right(90)
+def drawoff():
+    blankt()
+    t.penup()
+    t.fd(50)
+    blankt()
+    t.right(90)
+    t.pendown()
+def math(A):
+    drawline() if A in [2,3,4,5,6,8,9] else drawoff()
+    drawline() if A in [1,3,4,5,6,7,8,9,0] else drawoff()
+    drawline() if A in [2,3,5,6,8,9,0] else drawoff()
+    drawline() if A in [2,6,8,0] else drawoff()
+    if A in [4,5,6,8,9,0]:
+        t.pencolor("red")
+        t.left(90)
+        drawline()
+    if A in [1,2,3,7]:
+        t.left(90)
+        drawoff()
+    drawline() if A in [2,3,5,6,7,8,9,0] else drawoff()
+    drawline() if A in [1,2,3,4,7,8,9,0] else drawoff()
+    t.hideturtle()
+    t.done()
+for i in s:
+    if i == "-":
+        t.write("年")
+    if i == "=":
+        t.write("月")
+    if i == "+":
+        t.write("日")
+    else:
+        math(eval(i))
+
+
